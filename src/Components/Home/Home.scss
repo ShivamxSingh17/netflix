@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+$bg: rgb(15, 15, 15);
+
+.banner {
+    
+    height: 600px;
+    background-color: $bg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem;
+    box-sizing: border-box;
+
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        position: absolute;
+        background-color: $bg;
+        opacity: 0.4;
+    }
+    h1 {
+        color: white;
+        font-size: 3rem;
+        width: 40%;
+        z-index: 10;
+    }
+    p {
+        color: white;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        word-spacing: 3px;
+        z-index: 5;
+        width: 50%;
+        font-weight: 100;
+        font-family: "roboto", sans-serif;
+
+    }
+    >div{
+        display: flex;
+
+    button{
+        padding: 1.5rem;
+        width: 150px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 5px;
+        background-color: white;
+        margin: 1rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        &:hover{
+            opacity: 0.6;
+        }
+        &:nth-child(odd){
+            background-color: white;
+            color: black;
+        }
+        &:nth-child(even){
+            background-color: rgb(76, 76, 76);
+            color: white;
+        }
+        svg{
+            font-size: 1.7rem;
+            margin: 0 px;
+        }
+    }
+    }
+}
+
+.row {
+    background-color: $bg;
+    padding: 1rem;
+
+    >h2{
+        margin: 0.3rem;
+        font-weight: 400;
+    }
+
+    > div {
+        display: flex;
+        overflow-x: auto;
+    }
+
+}
+.card {
+    width: 200px;
+    margin: 0.3rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+    &:hover {
+        transform: translateY(-13px) ;
+    }
+}
+.genreBox {
+    overflow: auto;
+    display: flex;
+    height: 100px;
+    background-color: $bg;
+    > a {
+    color: black;
+    background-color: white;
+    border-radius: 5%;
+    margin: 1rem;
+    transition: all 0.5s;
+    min-width: 10rem;
+    text-align: center;
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+
+    &:hover {
+        background-color: #dad0d0;
+    }
+    }
+}
